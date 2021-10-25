@@ -36,7 +36,7 @@ let infoBoxText = {
     cytoplasm: {
         title: "Cytoplasm",
         imgSrc: "./img/blank.png",
-        text: "The cytoplasm is where everything happens for the cell. In the case of eukaryotes (which is what our plant cell is), the cytoplasm is home to a variety of different organelles, which help the cell to <b>stay alive</b>. As for prokaryotes, the cytoplasm is where chemical reactions happen, as well as where the DNA floats.",
+        text: "The cytoplasm is where everything happens for the cell. In the case of eukaryotic cells, or eukaryotes, (which is what our plant cell is), the cytoplasm is home to a variety of different organelles, which help the cell to <b>stay alive</b>. As for prokaryotes, the cytoplasm is where chemical reactions happen, as well as where the DNA floats.",
     },
     ser: {
         title: "Smooth ER",
@@ -46,12 +46,12 @@ let infoBoxText = {
     rer: {
         title: "Rough ER",
         imgSrc: "./img/roughER.jpeg",
-        text: 'After leaving the nucleus, the ribosomes may attach to the rough endoplasmic reticulum, or the RER, making it "rough". The purpose for both endoplasmic reticulum (both smooth and rough) is as a <b>passageway</b> for stuff needed throughout the cell. The materials will go out of the ER in a <b>vesicle</b>, somewhat similar to a small sac. The vesicles will then be accepted by the golgi apparatus.',
+        text: 'After leaving the nucleus, the ribosomes may attach to the rough endoplasmic reticulum (RER), making it "rough". The purpose for both endoplasmic reticulum (both smooth and rough) is as a <b>passageway</b> for stuff needed throughout the cell. The materials will go out of the ER in a <b>vesicle</b>, somewhat similar to a small sac. The vesicles will then be accepted by the golgi apparatus.',
     },
     golgi: {
         title: "Golgi Apparatus",
         imgSrc: "./img/golgi.jpeg",
-        text: "The golgi apparatus, or golgi body accepts the <b>vesicles</b> with protein produced by the SER and the RER. After the golgi apparatus recieves the protein, it will start modifying the protiens into <b>useful forms</b> for the cell. The golgi apparatus may also add other materials onto the protien when necessary.",
+        text: "The golgi apparatus, or golgi body accepts the <b>vesicles</b> with protein produced by the SER and the RER. After the golgi apparatus recieves the protein, it will start modifying the proteins into <b>useful forms</b> for the cell. The golgi apparatus may also add other materials onto the protein when necessary.",
     },
     ribosome: {
         title: "Ribosome",
