@@ -182,6 +182,7 @@ let loadFBX = (path, name) => {
     );
 };
 
+// Load all models
 loadFBX("./models/golgiFBX.fbx", "golgi");
 loadFBX("./models/nucleusFBX.fbx", "nucleus");
 loadFBX("./models/rerFBX.fbx", "rer");
