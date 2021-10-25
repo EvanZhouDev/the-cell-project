@@ -1,6 +1,7 @@
 // Import necessary loader
-import { FBXLoader } from "./three.js-master/examples/jsm/loaders/FBXLoader.js";
+import { FBXLoader } from "https://threejs.org/examples/jsm/loaders/FBXLoader.js";
 
+// What the info box displays
 let infoBoxText = {
     error: {
         title: "Oh noes! Something isn't right...",
@@ -39,22 +40,22 @@ let infoBoxText = {
     },
     ser: {
         title: "Smooth ER",
-        imgSrc: "./img/blank.png",
+        imgSrc: "./img/bothER.png",
         text: 'The smooth endoplasmic reticulum (SER) is similar to the rough ER. However, the smooth counterpart does not have any ribosomes attached to it, and it therefore "smooth". The purpose for both endoplasmic reticulum (both smooth and rough) is as a passageway for stuff needed throughout the cell. The materials will go out of the ER in a vesicle, somewhat similar to a small sac. The vesicles will then be accepted by the golgi apparatus.',
     },
     rer: {
         title: "Rough ER",
-        imgSrc: "./img/blank.png",
+        imgSrc: "./img/roughER.jpeg",
         text: 'After leaving the nucleus, the ribosomes may attach to the rough endoplasmic reticulum, or the RER, making it "rough". The purpose for both endoplasmic reticulum (both smooth and rough) is as a passageway for stuff needed throughout the cell. The materials will go out of the ER in a vesicle, somewhat similar to a small sac. The vesicles will then be accepted by the golgi apparatus.',
     },
     golgi: {
         title: "Golgi Apparatus",
-        imgSrc: "./img/blank.png",
+        imgSrc: "./img/golgi.jpeg",
         text: "The golgi apparatus, or golgi body accepts the vesicles produced by the SER and the RER. After the golgi apparatus recieves the protein, it will start modifying the protiens into useful forms for the cell. The golgi apparatus may also add other materials onto the protien when necessary.",
     },
     ribosome: {
         title: "Ribosome",
-        imgSrc: "./img/blank.png",
+        imgSrc: "./img/roughER.jpeg",
         text: "The ribosomes are in charge of protein synthesis. These ribosomes are created by the nucleolus (part of nucleus), and leave the nucleus to perform their jobs, based on their mRNA. The mRNA is a copy of the DNA in the nucleus.",
     },
 };
@@ -135,6 +136,7 @@ window.addEventListener("resize", onWindowResize);
 // Update loop
 animate();
 
+// List of organelles
 let organelles = [];
 
 // Function to load various FBX files
@@ -162,11 +164,6 @@ let loadFBX = (path, name) => {
                 }
             });
 
-            var helper = new THREE.BoxHelper(object.children[0]);
-            helper.geometry.computeBoundingBox();
-            let bBox = helper.geometry.boundingBox;
-            console.log(bBox)
-            
             // Adds the object
             scene.add(object);
             organelles.push({ name: name, mesh: meshes });
@@ -200,6 +197,7 @@ loadFBX("./models/cellOuterFBX.fbx", "cellOuter");
 // Raycaster to deduct what is hit
 const raycaster = new THREE.Raycaster();
 
+// Event listener to detect clicks
 document.getElementById("mainCanvas").addEventListener("click", (event) => {
     console.log(organelles);
     const mouse = {
@@ -221,7 +219,6 @@ document.getElementById("mainCanvas").addEventListener("click", (event) => {
                     console.log(x.name);
                     selected = true;
                     if (infoPanel.selected !== undefined) {
-                        let currentName = x.name;
                         infoPanel.style.bottom = "-100%";
 
                         setTimeout(() => {
@@ -264,6 +261,7 @@ document.getElementById("mainCanvas").addEventListener("click", (event) => {
     }
 });
 
+// Animation
 function animate() {
     requestAnimationFrame(animate);
     document.getElementById("closeInfoButton").onclick = () => {
@@ -278,6 +276,7 @@ function animate() {
     render();
 }
 
+// Render
 function render() {
     renderer.render(scene, camera);
 }
