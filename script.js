@@ -51,7 +51,7 @@ let infoBoxText = {
     golgi: {
         title: "Golgi Apparatus",
         imgSrc: "./img/golgi.jpeg",
-        text: "The golgi apparatus, or golgi body accepts the <b>vesicles</b> with protein produced by the SER and the RER. After the golgi apparatus recieves the protein, it will start modifying the protiens into <b>useful forms</b> for the cell. The golgi apparatus may also add other materials onto the protien when necessary.",
+        text: "The golgi apparatus, or golgi body accepts the <b>vesicles</b> with protein produced by the SER and the RER. After the golgi apparatus recieves the protein, it will start modifying the proteins into <b>useful forms</b> for the cell. The golgi apparatus may also add other materials onto the protein when necessary.",
     },
     ribosome: {
         title: "Ribosome",
