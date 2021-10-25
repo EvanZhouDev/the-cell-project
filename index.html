@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <title>My first three.js app</title>
+        <style>
+            /* Import Google Fonts for Roboto */
+            @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+
+            body {
+                margin: 0;
+                overflow: hidden;
+            }
+
+            .info {
+                width: 100%;
+                position: absolute;
+                height: 90%;
+                background-color: #ffffffcb;
+                bottom: -100%;
+                border-top-right-radius: 100px;
+                border-top-left-radius: 100px;
+                transition: bottom 0.5s ease-in;
+            }
+
+            .button {
+                position: absolute;
+                left: 5%;
+                top: 5%;
+                font-family: "Roboto", sans-serif;
+                font-size: 2em;
+                color: #5b5b5b;
+                border: none;
+                background: none;
+            }
+
+            .text {
+                position: absolute;
+                left: 15%;
+                top: 15%;
+                font-family: "Roboto", sans-serif;
+                font-size: 1.5em;
+                color: #5b5b5b;
+                /* margin-right: 15%; */
+                height: 80%;
+                overflow: scroll;
+                width: 70%;
+            }
+
+            .text::-webkit-scrollbar {
+                display: none;
+            }
+
+            #img {
+                height: 50%;
+                display: block;
+                margin-left: auto;
+                margin-right: auto;
+                border-radius: 40px;
+            }
+
+            #infoTextContent {
+                text-align: center;
+            }
+
+            #title {
+                font-size: 2em;
+                text-align: center;
+            }
+
+            .instruction {
+                position: absolute;
+                left: 1%;
+                font-family: "Roboto", sans-serif;
+                font-size: 1.5em;
+                color: #5b5b5b;
+                /* margin-right: 15%; */
+            }
+        </style>
+    </head>
+    <body>
+        <!-- Main three.js -->
+        <script src="./three.js-master/build/three.js"></script>
+
+        <!-- Orbital controls -->
+        <script
+            type="module"
+            src="./three.js-master/examples/js/controls/OrbitControls.js"
+        ></script>
+
+        <!-- Loader -->
+        <script
+            type="module"
+            src="./three.js-master/examples/jsm/loaders/FBXLoader.js"
+        ></script>
+
+        <script type="module" src="index.js"></script>
+        <h1 class="instruction">
+            Click any part of the cell to get more details!
+        </h1>
+
+        <div class="info" id="infoPanel">
+            <button class="button" id="closeInfoButton">close</button>
+            <div class="text" id="infoText">
+                <h1 id="title">Oh noes! Something isn't right...</h1>
+                <img src="./img/uhOh.gif" id="img" />
+                <br />
+                <p id="infoTextContent">
+                    If you see this, something has gone wrong! Try reloading the
+                    page, or file a report on the Issues page on Github if
+                    you've tried everything else. Your feedback is appreciated.
+                </p>
+            </div>
+        </div>
+    </body>
+</html>
