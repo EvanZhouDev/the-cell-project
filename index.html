@@ -76,6 +76,31 @@
                 color: #5b5b5b;
                 /* margin-right: 15%; */
             }
+
+            .help {
+                position: absolute;
+                top: 2%;
+                right: 1%;
+                width: 3vw;
+                height: 3vw;
+                font-weight: 500;
+                font-family: "Roboto", sans-serif;
+                font-size: 1.5em;
+                color: #5b5b5b;
+                border-width: 5px;
+                border-style: solid;
+                border-radius: 10px;
+                background: none;
+                transition: color 0.3s ease-in;
+            }
+
+            .help:hover {
+                color: #858585;
+            }
+
+            .help:active {
+                color: #181818;
+            }
         </style>
     </head>
     <body>
@@ -98,6 +123,9 @@
         <h1 class="instruction">
             Click any part of the cell to get more details!
         </h1>
+        <button class="help" onclick="location.href='https://github.com/EvanZhouDev/the-cell-project';">
+            ?
+        </button>
 
         <div class="info" id="infoPanel">
             <button class="button" id="closeInfoButton">close</button>
