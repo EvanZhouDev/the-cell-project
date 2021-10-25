@@ -31,7 +31,7 @@ let infoBoxText = {
     cellOuter: {
         title: "Cell Wall & Membrane",
         imgSrc: "./img/blank.png",
-        text: "The outer cover of the plant cell is composed of two parts: The <b>cell wall</b>, and the <b>cell membrane</b>. The cell membrane (in yellow) is made of lipids, and monitors what exits and enters the cell. In contrast, the cell wall (in green) is ridgid, and offers protection and shape support for the cell, without the ability to allow/disallow stuff.",
+        text: "The outer cover of the plant cell is composed of two parts: The <b>cell wall</b>, and the <b>cell membrane</b>. The cell membrane (in yellow) is made of lipids, and monitors what exits and enters the cell. In contrast, the cell wall (in green) is rigid, and offers protection and shape support for the cell, without the ability to allow/disallow stuff.",
     },
     cytoplasm: {
         title: "Cytoplasm",
