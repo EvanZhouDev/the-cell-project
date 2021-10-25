@@ -16,7 +16,7 @@ let infoBoxText = {
     vacuole: {
         title: "Vacuole",
         imgSrc: "./img/blank.png",
-        text: "The vacuole is responsible for storage in cells. For plant cells, there is one large vacoule. In contrast, for animal cells, there are usually a collection of smaller vacuoles.",
+        text: "The vacuole is responsible for <b>storage</b> in cells. For plant cells, there is one large vacoule. In contrast, for animal cells, there are usually a collection of smaller vacuoles.",
     },
     mitochondria: {
         title: "Mitochondrion",
@@ -26,37 +26,37 @@ let infoBoxText = {
     chloroplast: {
         title: "Chloroplast",
         imgSrc: "./img/chloroplast.png",
-        text: "The chloroplast is responsible for the creation of glucose through photosynthesis. Chloroplast is most usually green, due to the presence of <b>chlorophyl</b>, which is what harvests the light energy. Because of chloroplast and it's chlorophyll, plants that conduct phytosynthesis are green.",
+        text: "The chloroplast is responsible for the creation of <b>glucose</b> through <b>photosynthesis</b>. Chloroplast is most usually green, due to the presence of <b>chlorophyl</b>, which is what harvests the light energy. Because of chloroplast and it's chlorophyll, plants that conduct phytosynthesis are green.",
     },
     cellOuter: {
         title: "Cell Wall & Membrane",
         imgSrc: "./img/blank.png",
-        text: "The outer cover of the plant cell is composed of two parts: The cell wall, and the cell membrane. The cell membrane (in yellow) is made of lipids, and monitors what exits and enters the cell. In contrast, the cell wall (in green) is ridgid, and offers protection and shape support for the cell, without the ability to allow/disallow stuff.",
+        text: "The outer cover of the plant cell is composed of two parts: The <b>cell wall</b>, and the <b>cell membrane</b>. The cell membrane (in yellow) is made of lipids, and monitors what exits and enters the cell. In contrast, the cell wall (in green) is ridgid, and offers protection and shape support for the cell, without the ability to allow/disallow stuff.",
     },
     cytoplasm: {
         title: "Cytoplasm",
         imgSrc: "./img/blank.png",
-        text: "The cytoplasm is where everything happens for the cell. In the case of eukaryotes (which is what our plant cell is), the cytoplasm is home to a variety of different organelles, which help the cell to stay alive. As for prokaryotes, the cytoplasm is where chemical reactions happen, as well as where the DNA floats.",
+        text: "The cytoplasm is where everything happens for the cell. In the case of eukaryotes (which is what our plant cell is), the cytoplasm is home to a variety of different organelles, which help the cell to <b>stay alive</b>. As for prokaryotes, the cytoplasm is where chemical reactions happen, as well as where the DNA floats.",
     },
     ser: {
         title: "Smooth ER",
         imgSrc: "./img/bothER.png",
-        text: 'The smooth endoplasmic reticulum (SER) is similar to the rough ER. However, the smooth counterpart does not have any ribosomes attached to it, and it therefore "smooth". The purpose for both endoplasmic reticulum (both smooth and rough) is as a passageway for stuff needed throughout the cell. The materials will go out of the ER in a vesicle, somewhat similar to a small sac. The vesicles will then be accepted by the golgi apparatus.',
+        text: 'The smooth endoplasmic reticulum (SER) is similar to the rough ER. However, the smooth counterpart does not have any ribosomes attached to it, and it therefore "smooth". The purpose for both endoplasmic reticulum (both smooth and rough) is as a <b>passageway</b> for stuff needed throughout the cell. The materials will go out of the ER in a <b>vesicle</b>, somewhat similar to a small sac. The vesicles will then be accepted by the golgi apparatus.',
     },
     rer: {
         title: "Rough ER",
         imgSrc: "./img/roughER.jpeg",
-        text: 'After leaving the nucleus, the ribosomes may attach to the rough endoplasmic reticulum, or the RER, making it "rough". The purpose for both endoplasmic reticulum (both smooth and rough) is as a passageway for stuff needed throughout the cell. The materials will go out of the ER in a vesicle, somewhat similar to a small sac. The vesicles will then be accepted by the golgi apparatus.',
+        text: 'After leaving the nucleus, the ribosomes may attach to the rough endoplasmic reticulum, or the RER, making it "rough". The purpose for both endoplasmic reticulum (both smooth and rough) is as a <b>passageway</b> for stuff needed throughout the cell. The materials will go out of the ER in a <b>vesicle</b>, somewhat similar to a small sac. The vesicles will then be accepted by the golgi apparatus.',
     },
     golgi: {
         title: "Golgi Apparatus",
         imgSrc: "./img/golgi.jpeg",
-        text: "The golgi apparatus, or golgi body accepts the vesicles produced by the SER and the RER. After the golgi apparatus recieves the protein, it will start modifying the protiens into useful forms for the cell. The golgi apparatus may also add other materials onto the protien when necessary.",
+        text: "The golgi apparatus, or golgi body accepts the <b>vesicles</b> with protein produced by the SER and the RER. After the golgi apparatus recieves the protein, it will start modifying the protiens into <b>useful forms</b> for the cell. The golgi apparatus may also add other materials onto the protien when necessary.",
     },
     ribosome: {
         title: "Ribosome",
         imgSrc: "./img/roughER.jpeg",
-        text: "The ribosomes are in charge of protein synthesis. These ribosomes are created by the nucleolus (part of nucleus), and leave the nucleus to perform their jobs, based on their mRNA. The mRNA is a copy of the DNA in the nucleus.",
+        text: "The ribosomes are in charge of <b>protein synthesis</b>. These ribosomes are created by the <b>nucleolus</b> (part of nucleus), and leave the nucleus to perform their jobs, based on their <b>mRNA</b>. The mRNA is a copy of the DNA in the nucleus.",
     },
 };
 
