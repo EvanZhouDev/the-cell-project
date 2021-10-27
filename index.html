@@ -4,7 +4,7 @@
         <meta charset="utf-8" />
         <title>The Cell Project</title>
 
-        <link rel="stylesheet" type="text/css" href="style.css">
+        <link rel="stylesheet" type="text/css" href="style.css" />
     </head>
     <body>
         <!-- Main three.js -->
@@ -26,9 +26,13 @@
         <h1 class="instruction">
             Click any part of the cell to get more details!
         </h1>
-        <button class="help" onclick="location.href='https://github.com/EvanZhouDev/the-cell-project';">
+        <button
+            class="help"
+            onclick="location.href='https://github.com/EvanZhouDev/the-cell-project';"
+        >
             ?
         </button>
+        <button class="infoTable" id="infoTableButton">Aa</button>
 
         <div class="info" id="infoPanel">
             <button class="button" id="closeInfoButton">close</button>
@@ -41,6 +45,67 @@
                     page, or file a report on the Issues page on Github if
                     you've tried everything else. Your feedback is appreciated.
                 </p>
+            </div>
+        </div>
+        
+        <div class="info" id="infoTable">
+            <button class="button" id="closeInfoTableButton">close</button>
+            <div class="text" id="infoText">
+                <h1 id="title">What does <i>this</i> do?</h1>
+                <table class="infoTableContent">
+                    <thead>
+                        <tr>
+                            <th>Organelle</th>
+                            <th>Function/Use</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Nucleus</td>
+                            <td>The nucleus controls what processes occur in the cell. The instruction that the cell would follow is called “DNA”.  The nucleus also has a nucleolus inside it, which creates ribosomes.</td>
+                        </tr>
+                        <tr>
+                            <td>Vacuole</td>
+                            <td>The vacuole is responsible for storing materials in the cell. In plant cells, they store mostly water, and sometimes act as part of the structure of the cell. Animal cells have a variety of smaller vacuoles, which may contain anything necessary.</td>
+                        </tr>
+                        <tr>
+                            <td>Mitochondria</td>
+                            <td>Mitochondria is what breaks down glucose (which may come from a variety of sources), and turns it into ATP, which the cell uses as energy. Without the mitochondria, the cell would not have power to run.</td>
+                        </tr>
+                        <tr>
+                            <td>Chlroroplast</td>
+                            <td>The chloroplast is the organelle in charge of photosynthesis. This organelle is green because of it’s chlorophyll (which absorbs sunlight), and in turn, because of this, most plants are green. For plants, the glucose produced by photosynthesis is used in cellular respiration, which is done by the mitochondria.</td>
+                        </tr>
+                        <tr>
+                            <td>Cell Wall</td>
+                            <td>The cell wall is strong and rigid, in only plant cells, and adds structure to cells. They allow plants to grow tall, and is a second barrier, over the cell membrane. The cell wall is different from the cell membrane as it cannot prevent things smaller than a certain size in.</td>
+                        </tr>
+                        <tr>
+                            <td>Cell Membrane</td>
+                            <td>The cell membrane protects the cell, and holds it together. The membrane is also a way for the cell to regulate what goes in and out of the cell. Because of how the membrane is constructed of interlocking hydrophobic lipids, it allows the cell to be waterproof.</td>
+                        </tr>
+                        <tr>
+                            <td>Cytoplasm</td>
+                            <td>Everything floats in the cytoplasm. If the cell is prokaryotic, then the chemical reactions happen in the cytoplasm. If it is a eukaryotic cell, then the cytoplasm would house all of the organelles, which would in turn perform the critical chemical reactions.</td>
+                        </tr>
+                        <tr>
+                            <td>Smooth Endoplasmic Reticulum</td>
+                            <td>The smooth endoplasmic reticulum is similar to the rough endoplasmic reticulum. However, it does not have any ribosomes attached to it. The purpose of the smooth endoplasmic reticulum is to store and produce lipids and steroids, use those same lipids and steroids to communicate with the rest of the cell, as well as detoxify the cell.</td>
+                        </tr>
+                        <tr>
+                            <td>Rough Endoplasmic Reticulum</td>
+                            <td>When the ribosome leaves the nucleolus, it connects onto the rough endoplasmic reticulum to make proteins. In the rough ER The protein is marked with a carbohydrate, so that the protein knows where to be sent. After this process, the protein is covered in a vesicle made of lipids to be sent out.</td>
+                        </tr>
+                        <tr>
+                            <td>Golgi Apparatus</td>
+                            <td>The Golgi body is responsible for modifying and ejecting the protein. The proteins may either return to the nucleus, get sent to a different portion of the cell, be used to communicate with the rest of the cell, or be recycled to be reused.</td>
+                        </tr>
+                        <tr>
+                            <td>Ribosome</td>
+                            <td>Ribosomes, which are created in the nucleolus, are responsible for protein synthesis. Protein synthesis, simply, is assembling amino acids into proteins.</td>
+                        </tr>
+                    </tbody>
+                </table>
             </div>
         </div>
 

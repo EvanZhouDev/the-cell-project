@@ -15,11 +15,11 @@ let infoBoxText = {
     },
     vacuole: {
         title: "Vacuole",
-        imgSrc: "./img/blank.png",
+        imgSrc: "./img/vacuole.png",
         text: "The vacuole is responsible for storing materials in the cell. In plant cells, they store mostly water, and sometimes act as part of the structure of the cell. Animal cells have a variety of smaller vacuoles, which may contain anything necessary.",
     },
     mitochondria: {
-        title: "Mitochondrion",
+        title: "Mitochondria",
         imgSrc: "./img/mitochondria.jpeg",
         text: "Mitochondria is what breaks down glucose (which may come from a variety of sources), and turns it into ATP, which the cell uses as energy. Without the mitochondria, the cell would not have power to run.",
     },
@@ -71,10 +71,15 @@ let enableWatermark = false;
 let infoPanel = document.getElementById("infoPanel");
 infoPanel.selected = undefined;
 
+// The info table
+let infoTable = document.getElementById("infoTable");
+infoTable.shown = false;
+
 let info = document.getElementById("infoTextContent");
 let img = document.getElementById("img");
 let title = document.getElementById("title");
 let loading = document.getElementById("loadingIndicator");
+
 
 // Loader
 const fbxLoader = new FBXLoader();
@@ -212,12 +217,12 @@ const delta = 3;
 let startX;
 let startY;
 
-document.addEventListener('mousedown', function (event) {
+document.getElementById("mainCanvas").addEventListener('mousedown', function (event) {
   startX = event.pageX;
   startY = event.pageY;
 });
 
-document.addEventListener('mouseup', function (event) {
+document.getElementById("mainCanvas").addEventListener('mouseup', function (event) {
   const diffX = Math.abs(event.pageX - startX);
   const diffY = Math.abs(event.pageY - startY);
 
@@ -283,15 +288,25 @@ document.addEventListener('mouseup', function (event) {
   }
 });
 
-// Event listener to detect clicks
-document.getElementById("mainCanvas").addEventListener("click", (event) => {
-});
-
 // Animation
 function animate() {
     requestAnimationFrame(animate);
     document.getElementById("closeInfoButton").onclick = () => {
         infoPanel.selected = undefined;
+    };
+
+    document.onkeydown = (e) => {
+        if (e.key == "Escape") {
+            infoPanel.selected = undefined;
+            infoTable.shown = false;
+        }
+    };
+
+    document.getElementById("closeInfoTableButton").onclick = () => {
+        infoTable.shown = !infoTable.shown;
+    };
+    document.getElementById("infoTableButton").onclick = () => {
+        infoTable.shown = !infoTable.shown;
     };
 
     controls.update(); // only required if controls.enableDamping = true, or if controls.autoRotate = true
@@ -313,6 +328,16 @@ function animate() {
             loading.innerHTML = "Created by Evan (Yifan) Zhou";
         }
     }
+
+    if (infoTable.shown) {
+        infoTable.style.bottom = "0";
+    }else{
+        infoTable.style.bottom = "-100%";
+    }
+
+    // if (table.shown) {
+        
+    // }
 
     render();
 }

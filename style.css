@@ -10,7 +10,7 @@ body {
     width: 100%;
     position: absolute;
     height: 90%;
-    background-color: #ffffffcb;
+    background-color: #ffffffe3;
     bottom: -100%;
     border-top-right-radius: 100px;
     border-top-left-radius: 100px;
@@ -73,7 +73,7 @@ body {
 .loading {
     position: absolute;
     font-family: "Roboto", sans-serif;
-    font-size: 1.5em;
+    font-size: 1.3em;
     font-weight: 300;
     color: #5b5b5b;
     right: 1%;
@@ -92,11 +92,11 @@ body {
     position: absolute;
     top: 2%;
     right: 1%;
-    width: 3vw;
-    height: 3vw;
+    width: 4vw;
+    height: 4vw;
     font-weight: 500;
     font-family: "Roboto", sans-serif;
-    font-size: 1.5em;
+    font-size: 1.8em;
     color: #5b5b5b;
     border-width: 5px;
     border-style: solid;
@@ -111,4 +111,61 @@ body {
 
 .help:active {
     color: #181818;
+}
+.infoTable {
+    position: absolute;
+    top: 12%;
+    right: 1%;
+    width: 4vw;
+    height: 4vw;
+    font-weight: 500;
+    font-family: "Roboto", sans-serif;
+    font-size: 1.8em;
+    text-align: center;
+    color: #5b5b5b;
+    border-width: 5px;
+    border-style: solid;
+    border-radius: 10px;
+    background: none;
+    transition: color 0.3s ease-in;
+}
+
+.infoTable:hover {
+    color: #858585;
+}
+
+.infoTable:active {
+    color: #181818;
+}
+
+.infoTableContent {
+    padding: 0px;
+    top: 20%;
+    /* transform: translate(50%, 0); */
+    margin-top: 0%;
+    width: 80%;
+    margin-left:auto;
+    margin-right:auto;
+}
+
+td { 
+    padding: 10px;
+}
+
+table {
+    border-collapse: collapse;
+}
+
+tbody tr:nth-child(even) {
+    background-color: #dadada;
+}
+tbody tr:nth-child(odd) {
+    background-color: #e9e9e9;
+}
+
+thead,
+tfoot {
+    height: 3vw;
+    background-color: #5b5b5b;
+    color: #fff;
 }
