@@ -11,47 +11,47 @@ let infoBoxText = {
     nucleus: {
         title: "Nucleus",
         imgSrc: "./img/DNA.jpeg",
-        text: "The nucleus is the organelle that controls all of the other organelles. It does this by it's <b>DNA</b> (pictured above), which is basically the instructions of the cell. The nucleus also contains the <b>nucleolus</b>. The nucleolus is the smaller sphere-like object inscribed within the nucleus, which is in charge of creating <b>ribosomes</b>. In this model, the ribosomes are the black spheres (to learn more about ribosomes, click them in the model!).",
+        text: "The nucleus controls what processes occur in the cell. The instruction that the cell would follow is called “DNA”.  The nucleus also has a nucleolus inside it, which creates ribosomes.",
     },
     vacuole: {
         title: "Vacuole",
         imgSrc: "./img/blank.png",
-        text: "The vacuole is responsible for <b>storage</b> in cells. For plant cells, there is one large vacoule. In contrast, for animal cells, there are usually a collection of smaller vacuoles.",
+        text: "The vacuole is responsible for storing materials in the cell. In plant cells, they store mostly water, and sometimes act as part of the structure of the cell. Animal cells have a variety of smaller vacuoles, which may contain anything necessary.",
     },
     mitochondria: {
         title: "Mitochondrion",
         imgSrc: "./img/mitochondria.jpeg",
-        text: "The mitochondria is resposible for the energy creation in cells. Through <b>cellular repiration</b>, these special organelles are able to create <b>ATP</b> from glucose. Looking at their structure, you may see that it has a folded membrane inside, to increase the amount of area it has to perform its energy creation.",
+        text: "Mitochondria is what breaks down glucose (which may come from a variety of sources), and turns it into ATP, which the cell uses as energy. Without the mitochondria, the cell would not have power to run.",
     },
     chloroplast: {
         title: "Chloroplast",
         imgSrc: "./img/chloroplast.png",
-        text: "The chloroplast is responsible for the creation of <b>glucose</b> through <b>photosynthesis</b>. Chloroplast is most usually green, due to the presence of <b>chlorophyl</b>, which is what harvests the light energy. Because of chloroplast and it's chlorophyll, plants that conduct phytosynthesis are green.",
+        text: "The chloroplast is the organelle in charge of photosynthesis. This organelle is green because of it’s chlorophyll (which absorbs sunlight), and in turn, because of this, most plants are green. For plants, the glucose produced by photosynthesis is used in cellular respiration, which is done by the mitochondria.",
     },
     cellOuter: {
         title: "Cell Wall & Membrane",
         imgSrc: "./img/blank.png",
-        text: "The outer cover of the plant cell is composed of two parts: The <b>cell wall</b>, and the <b>cell membrane</b>. The cell membrane (in yellow) is made of lipids, and monitors what exits and enters the cell. In contrast, the cell wall (in green) is rigid, and offers protection and shape support for the cell, without the ability to allow/disallow stuff.",
+        text: "The outer cover of the cell is composed of two parts: The cell membrane, and the cell wall.<br/><b>Cell membrane:</b><br/>The cell membrane protects the cell, and holds it together. The membrane is also a way for the cell to regulate what goes in and out of the cell. Because of how the membrane is constructed of interlocking hydrophobic lipids, it allows the cell to be waterproof.<br/><b>Cell wall:</b><br/>The cell wall is strong and rigid, in only plant cells, and adds structure to cells. They allow plants to grow tall, and is a second barrier, over the cell membrane. The cell wall is different from the cell membrane as it cannot prevent things smaller than a certain size in.",
     },
     cytoplasm: {
         title: "Cytoplasm",
         imgSrc: "./img/blank.png",
-        text: "The cytoplasm is where everything happens for the cell. In the case of eukaryotes (which is what our plant cell is), the cytoplasm is home to a variety of different organelles, which help the cell to <b>stay alive</b>. As for prokaryotes, the cytoplasm is where chemical reactions happen, as well as where the DNA floats.",
+        text: "Everything floats in the cytoplasm. If the cell is prokaryotic, then the chemical reactions happen in the cytoplasm. If it is a eukaryotic cell, then the cytoplasm would house all of the organelles, which would in turn perform the critical chemical reactions.",
     },
     ser: {
         title: "Smooth ER",
         imgSrc: "./img/bothER.png",
-        text: 'The smooth endoplasmic reticulum (SER) is similar to the rough ER. However, the smooth counterpart does not have any ribosomes attached to it, and it therefore "smooth". The purpose for both endoplasmic reticulum (both smooth and rough) is as a <b>passageway</b> for stuff needed throughout the cell. The materials will go out of the ER in a <b>vesicle</b>, somewhat similar to a small sac. The vesicles will then be accepted by the golgi apparatus.',
+        text: 'The smooth endoplasmic reticulum is similar to the rough endoplasmic reticulum. However, it does not have any ribosomes attached to it. The purpose of the smooth endoplasmic reticulum is to store and produce lipids and steroids, use those same lipids and steroids to communicate with the rest of the cell, as well as detoxify the cell.',
     },
     rer: {
         title: "Rough ER",
         imgSrc: "./img/roughER.jpeg",
-        text: 'After leaving the nucleus, the ribosomes may attach to the rough endoplasmic reticulum, or the RER, making it "rough". The purpose for both endoplasmic reticulum (both smooth and rough) is as a <b>passageway</b> for stuff needed throughout the cell. The materials will go out of the ER in a <b>vesicle</b>, somewhat similar to a small sac. The vesicles will then be accepted by the golgi apparatus.',
+        text: 'When the ribosome leaves the nucleolus, it connects onto the rough endoplasmic reticulum to make proteins. In the rough ER The protein is marked with a carbohydrate, so that the protein knows where to be sent. After this process, the protein is covered in a vesicle made of lipids to be sent out.',
     },
     golgi: {
         title: "Golgi Apparatus",
         imgSrc: "./img/golgi.jpeg",
-        text: "The golgi apparatus, or golgi body accepts the <b>vesicles</b> with protein produced by the SER and the RER. After the golgi apparatus recieves the protein, it will start modifying the proteins into <b>useful forms</b> for the cell. The golgi apparatus may also add other materials onto the protein when necessary.",
+        text: "The Golgi body is responsible for modifying and ejecting the protein. The proteins may either return to the nucleus, get sent to a different portion of the cell, be used to communicate with the rest of the cell, or be recycled to be reused.",
     },
     ribosome: {
         title: "Ribosome",
@@ -63,6 +63,9 @@ let infoBoxText = {
 // Necessary variables
 let camera, controls, scene, renderer;
 let sceneMeshes = [];
+let loadAmount = 0;
+let loadIndicatorShown = false;
+let enableWatermark = false;
 
 // The info panel
 let infoPanel = document.getElementById("infoPanel");
@@ -71,6 +74,7 @@ infoPanel.selected = undefined;
 let info = document.getElementById("infoTextContent");
 let img = document.getElementById("img");
 let title = document.getElementById("title");
+let loading = document.getElementById("loadingIndicator");
 
 // Loader
 const fbxLoader = new FBXLoader();
@@ -84,7 +88,6 @@ renderer = new THREE.WebGLRenderer({ antialias: true });
 renderer.setPixelRatio(window.devicePixelRatio);
 renderer.setSize(window.innerWidth, window.innerHeight);
 renderer.domElement.id = "mainCanvas";
-console.log(renderer.domElement);
 document.body.appendChild(renderer.domElement);
 
 // Creates a camera
@@ -107,6 +110,9 @@ controls.screenSpacePanning = false;
 
 controls.minDistance = 100;
 controls.maxDistance = 500;
+
+controls.zoom0 = 2;
+controls.reset();
 
 // Adds lights
 const dirLight1 = new THREE.DirectionalLight(0xffffff);
@@ -174,6 +180,9 @@ let loadFBX = (path, name) => {
             console.log(
                 path + " is " + (xhr.loaded / xhr.total) * 100 + "% loaded"
             );
+            if (xhr.loaded / xhr.total == 1) {
+                loadAmount += 1;
+            }
         },
         (error) => {
             // In the case of any error, log it.
@@ -198,30 +207,41 @@ loadFBX("./models/cellOuterFBX.fbx", "cellOuter");
 // Raycaster to deduct what is hit
 const raycaster = new THREE.Raycaster();
 
-// Event listener to detect clicks
-document.getElementById("mainCanvas").addEventListener("click", (event) => {
-    console.log(organelles);
+
+const delta = 3;
+let startX;
+let startY;
+
+document.addEventListener('mousedown', function (event) {
+  startX = event.pageX;
+  startY = event.pageY;
+});
+
+document.addEventListener('mouseup', function (event) {
+  const diffX = Math.abs(event.pageX - startX);
+  const diffY = Math.abs(event.pageY - startY);
+
+  if (diffX < delta && diffY < delta) {
     const mouse = {
         x: (event.clientX / renderer.domElement.clientWidth) * 2 - 1,
         y: -(event.clientY / renderer.domElement.clientHeight) * 2 + 1,
     };
     raycaster.setFromCamera(mouse, camera);
     const intersects = raycaster.intersectObjects(sceneMeshes, false);
-
+    
     if (intersects.length > 0) {
         let n = new THREE.Vector3();
         n.copy(intersects[0].face.normal);
         n.transformDirection(intersects[0].object.matrixWorld);
         const selectedObject = intersects[0];
         let selected = false;
-        loop: for (let [i, x] of organelles.entries()) {
-            for (let [i2, x2] of x.mesh.entries()) {
+        loop: for (let [_i, x] of organelles.entries()) {
+            for (let [_i2, x2] of x.mesh.entries()) {
                 if (selectedObject.object.name == x2.name) {
-                    console.log(x.name);
                     selected = true;
                     if (infoPanel.selected !== undefined) {
                         infoPanel.style.bottom = "-100%";
-
+    
                         setTimeout(() => {
                             infoPanel.selected = x.name;
                             if (infoBoxText[infoPanel.selected] == undefined) {
@@ -260,6 +280,11 @@ document.getElementById("mainCanvas").addEventListener("click", (event) => {
     } else {
         infoPanel.selected = undefined;
     }
+  }
+});
+
+// Event listener to detect clicks
+document.getElementById("mainCanvas").addEventListener("click", (event) => {
 });
 
 // Animation
@@ -272,6 +297,21 @@ function animate() {
     controls.update(); // only required if controls.enableDamping = true, or if controls.autoRotate = true
     if (infoPanel.selected == undefined) {
         infoPanel.style.bottom = "-100%";
+    }
+
+    if (loadAmount >= 10 && !loadIndicatorShown) {
+        loading.innerHTML = "Loading complete. Enjoy.";
+        loadIndicatorShown = true;
+        setInterval(() => {
+            enableWatermark = true;
+            loading.innerHTML = "Created by Evan (Yifan) Zhou";
+        }, 3000)
+    }
+    
+    if (enableWatermark) {
+        if (loading.innerHTML !== "Created by Evan (Yifan) Zhou") {
+            loading.innerHTML = "Created by Evan (Yifan) Zhou";
+        }
     }
 
     render();
