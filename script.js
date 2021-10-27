@@ -56,7 +56,7 @@ let infoBoxText = {
     ribosome: {
         title: "Ribosome",
         imgSrc: "./img/roughER.jpeg",
-        text: "The ribosomes are in charge of <b>protein synthesis</b>. These ribosomes are created by the <b>nucleolus</b> (part of nucleus), and leave the nucleus to perform their jobs, based on their <b>mRNA</b>. The mRNA is a copy of the DNA in the nucleus.",
+        text: "Ribosomes, which are created in the nucleolus, are responsible for protein synthesis. Protein synthesis, simply, is assembling amino acids into proteins.",
     },
 };
 
