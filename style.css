@@ -1,0 +1,109 @@
+ /* Import Google Fonts for Roboto */
+ @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+
+ body {
+     margin: 0;
+     overflow: hidden;
+ }
+
+ .info {
+     width: 100%;
+     position: absolute;
+     height: 90%;
+     background-color: #ffffffcb;
+     bottom: -100%;
+     border-top-right-radius: 100px;
+     border-top-left-radius: 100px;
+     transition: bottom 0.5s ease-in;
+ }
+
+ .button {
+     position: absolute;
+     left: 5%;
+     top: 5%;
+     font-family: "Roboto", sans-serif;
+     font-size: 2em;
+     color: #5b5b5b;
+     border: none;
+     background: none;
+ }
+
+ .text {
+     position: absolute;
+     left: 15%;
+     top: 15%;
+     font-family: "Roboto", sans-serif;
+     font-size: 1.5em;
+     color: #5b5b5b;
+     /* margin-right: 15%; */
+     height: 80%;
+     overflow: scroll;
+     width: 70%;
+ }
+
+ .text::-webkit-scrollbar {
+     display: none;
+ }
+
+ #img {
+     height: 50%;
+     display: block;
+     margin-left: auto;
+     margin-right: auto;
+     border-radius: 40px;
+ }
+
+ #infoTextContent {
+     text-align: center;
+ }
+
+ #title {
+     font-size: 2em;
+     text-align: center;
+ }
+
+ .instruction {
+     position: absolute;
+     left: 1%;
+     font-family: "Roboto", sans-serif;
+     font-size: 1.5em;
+     color: #5b5b5b;
+     /* margin-right: 15%; */
+ }
+
+ .loading {
+     position: absolute;
+     font-family: "Roboto", sans-serif;
+     font-size: 1.5em;
+     font-weight: 300;
+     color: #5b5b5b;
+     /* width: 100%; */
+     right: 1%;
+     text-align: center;
+     bottom: 2%;
+ }
+
+ .help {
+     position: absolute;
+     top: 2%;
+     right: 1%;
+     width: 3vw;
+     height: 3vw;
+     font-weight: 500;
+     font-family: "Roboto", sans-serif;
+     font-size: 1.5em;
+     color: #5b5b5b;
+     border-width: 5px;
+     border-style: solid;
+     border-radius: 10px;
+     background: none;
+     transition: color 0.3s ease-in;
+ }
+
+ .help:hover {
+     color: #858585;
+ }
+
+ .help:active {
+     color: #181818;
+ }
