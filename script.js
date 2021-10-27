@@ -26,7 +26,7 @@ let infoBoxText = {
     chloroplast: {
         title: "Chloroplast",
         imgSrc: "./img/chloroplast.png",
-        text: "The chloroplast is the organelle in charge of photosynthesis. This organelle is green because of it’s chlorophyll (which absorbs sunlight), and in turn, because of this, most plants are green. For plants, the glucose produced by photosynthesis is used in cellular respiration, which is done by the mitochondria.",
+        text: "The chloroplast is the organelle in charge of photosynthesis. This organelle is green because of its chlorophyll (which absorbs sunlight), and in turn, because of this, most plants are green. For plants, the glucose produced by photosynthesis is used in cellular respiration, which is done by the mitochondria.",
     },
     cellOuter: {
         title: "Cell Wall & Membrane",
