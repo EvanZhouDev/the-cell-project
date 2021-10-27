@@ -46,7 +46,7 @@ let infoBoxText = {
     rer: {
         title: "Rough ER",
         imgSrc: "./img/roughER.jpeg",
-        text: 'When the ribosome leaves the nucleolus, it connects onto the rough endoplasmic reticulum to make proteins. In the rough ER The protein is marked with a carbohydrate, so that the protein knows where to be sent. After this process, the protein is covered in a vesicle made of lipids to be sent out.',
+        text: 'When the ribosome leaves the nucleolus, it connects onto the rough endoplasmic reticulum to make proteins. In the rough ER, the protein is marked with a carbohydrate, so that the protein knows where to be sent. After this process, the protein is covered in a vesicle made of lipids to be sent out.',
     },
     golgi: {
         title: "Golgi Apparatus",
