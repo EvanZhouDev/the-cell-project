@@ -1,6 +1,3 @@
-// Import necessary loader
-import { FBXLoader } from "https://threejs.org/examples/jsm/loaders/FBXLoader.js";
-
 // What the info box displays
 let infoBoxText = {
     error: {
@@ -82,7 +79,7 @@ let loading = document.getElementById("loadingIndicator");
 
 
 // Loader
-const fbxLoader = new FBXLoader();
+const fbxLoader = new THREE.FBXLoader();
 
 // Assigns scene
 scene = new THREE.Scene();
