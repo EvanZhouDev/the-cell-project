@@ -1,5 +1,5 @@
 // Import necessary loader
-import { FBXLoader } from "https://threejs.org/examples/jsm/loaders/FBXLoader.js";
+import { FBXLoader } from "https://cdn.jsdelivr.net/npm/three@0.132.2/examples/jsm/loaders/FBXLoader.js";
 
 // What the info box displays
 let infoBoxText = {
